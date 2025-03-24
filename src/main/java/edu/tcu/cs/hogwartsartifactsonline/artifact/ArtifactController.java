@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/v1/artifacts")
+@RequestMapping("${api.endpoint.base-url}/artifacts")
 public class ArtifactController {
     private final ArtifactService artifactService;
     private final ArtifactToArtifactDtoConverter artifactToArtifactDtoConverter;
@@ -27,8 +27,8 @@ public class ArtifactController {
     @GetMapping("/{artifactId}")
     public Result findArtifactById(@PathVariable String artifactId) {
         Artifact foundArtifacts = this.artifactService.findById(artifactId);
-        ArtifactDto artifactDto = this.artifactToArtifactDtoConverter.convert(foundArtifacts);
-        return new Result(true, StatusCode.SUCCESS, "Find One Success", artifactDto);
+        ArtifactDto artifactDtos = this.artifactToArtifactDtoConverter.convert(foundArtifacts);
+        return new Result(true, StatusCode.SUCCESS, "Find One Success", artifactDtos);
     }
     @GetMapping
     public Result findAllArtifacts() {
