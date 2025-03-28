@@ -4,10 +4,8 @@ import edu.tcu.cs.hogwartsartifactsonline.wizard.Wizard;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import org.hibernate.property.access.spi.Setter;
 
 import java.io.Serializable;
-import java.lang.reflect.Constructor;
 
 @Entity
 public class Artifact implements Serializable {
@@ -19,14 +17,15 @@ public class Artifact implements Serializable {
 
     private String description;
 
-    private String imgURL;
+    private String imageUrl;
 
-    @ManyToOne // 1 owner can own 1+ artifacts
+    @ManyToOne
     private Wizard owner;
 
-    public Artifact() {
 
+    public Artifact() {
     }
+
     public String getId() {
         return id;
     }
@@ -51,12 +50,12 @@ public class Artifact implements Serializable {
         this.description = description;
     }
 
-    public String getImgURL() {
-        return imgURL;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImgURL(String imgURL) {
-        this.imgURL = imgURL;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public Wizard getOwner() {
