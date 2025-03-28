@@ -205,7 +205,7 @@ class WizardServiceTest {
         a.setId("1250808601744904192");
         a.setName("Invisibility Cloak");
         a.setDescription("An invisibility cloak is used to make the wearer invisible.");
-        a.setImgURL("ImgURL");
+        a.setImageUrl("ImageUrl");
 
         Wizard w2 = new Wizard();
         w2.setId(2);
@@ -234,7 +234,7 @@ class WizardServiceTest {
         a.setId("1250808601744904192");
         a.setName("Invisibility Cloak");
         a.setDescription("An invisibility cloak is used to make the wearer invisible.");
-        a.setImgURL("ImgURL");
+        a.setImageUrl("ImageUrl");
 
         Wizard w2 = new Wizard();
         w2.setId(2);
