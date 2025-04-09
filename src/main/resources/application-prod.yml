@@ -6,7 +6,7 @@ spring:
           property-sources[0]:
             endpoint: ${AZURE_KEY_VAULT_ENDPOINT} # environment variable
   datasource:
-    url: ${datasource-url-1g} # secret from Azure Key Vault
+    url: ${datasource-url-1} # secret from Azure Key Vault
     username: ${datasource-username} # secret from Azure Key Vault
     password: ${datasource-password} # secret from Azure Key Vault
   jpa:
